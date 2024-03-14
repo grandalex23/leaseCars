@@ -1,0 +1,226 @@
+/* вначале идут общие стилии либо стили заготовки*/
+html {
+  /*переназначение модели отсчета размера элементов на логично-понятную
+  где padding с border уже будут внутри width и height и невыйдут эти размеры
+  а по умол. content-box браузер плюсует все width, padding, border и т.д.*/
+  box-sizing: border-box;
+}
+
+
+/* inherit - как у родителя т.к. как у html*/
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  /*обнуление дефолтных стилей браузеров*/
+  margin: 0;
+  padding: 0;
+}
+
+/* следующие строки для прибития футера к низу экрана */
+html,
+body {
+  height: 100%;
+}
+
+
+/*для всех списков*/
+ul {
+  /*убираем точки*/
+  list-style-type: none;
+}
+
+/*для всех ссылок*/
+a {
+  /*убираем подчеркивание*/
+  text-decoration: none;
+  /*ставим родительский цвет*/
+  color: inherit;
+}
+
+.wrapper {
+  /* следующие 3 строки для прибития футера к низу экрана */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  /* тех. фон для наглядности background-color: #ccc;*/
+  /*займет ширину по максимуму но не более 1200рх
+  на кинули еще 10*2 из-за падингов для внутр контента
+  в итоге контент займет всегда не более 1200*/
+  max-width: 1220px;
+  /*сверху и снизу 0 а слева и справа автоматически 
+  что в итоге даст блок по центру */
+  margin: 0 auto;
+  /*отодвигаем контент на 10рх слева и справа */
+  padding: 0 10px;
+}
+
+body {
+  /*стили идущие сквось весь сайт*/
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* высота шрифта 120% от стандартной */
+  line-height: 1.3;
+}
+
+.header {
+  background-color: #151515;
+}
+
+/*шапка на гл странице*/
+.header-main {
+  background-color: transparent;
+  /* мы "отрываем" этот элемент и ставим выше 
+  и ставим 0 по краям*/
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+}
+
+/*внутренний контейнер шапки*/
+.header__inner {
+  /*взяли с макета растояние от верха*/
+  padding-top: 40px;
+  padding-bottom: 45px;
+  /*этот элем сост из 2 частей - лого и меню
+  поэтому прим сетку и отодвине элем по краям*/
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu__list {
+  /* слова в меню в линию и раздвинуты на 35рх*/
+  display: flex;
+  gap: 35px;
+}
+
+.menu__list-link {
+  /*цвет ссылок взят с макета*/
+  color: #fff;
+  /*даже если мы написали руками капсом
+  надо поставить св-во чтобы меню всегда было
+  заглавными буквами*/
+  text-transform: uppercase;
+  /*делаем вес толщины бльше и получаем более жирный шрифт*/
+  font-weight: 700;
+}
+
+.main {
+  /* следующая строка для прибития футера к низу экрана */
+  flex-grow: 1;
+}
+
+.top {
+  color: #fff;
+  text-align: center;
+  padding-top: 250px;
+  padding-bottom: 50px;
+  /* мы "отрываем" этот элемент и ставим выше 
+  и ставим 0 по краям*/
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+}
+
+.title {
+  padding-bottom: 40px;
+  font-size: 96px;
+  font-weight: 700;
+}
+
+.top__link {
+  background-color: #151515;
+  padding: 23px;
+  /* ширина блока 430 и чтобы не ставить падинги по бокам */
+  /* укажем макс ширину и ширина блока будет пост 
+  независимо от его содержания, т.е. конетнт будет переноситься*/
+  max-width: 430px;
+  /* чтобы ширина была 430 ставим 100% */
+  width: 100%;
+  font-size: 36px;
+  font-weight: 700;
+  /* чтобы сдлать тег а блочным */
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+
+.swiper-wrapper {
+  /* т.к. на исходнике картинка с черным оверлеем и прозрачность его 0,3
+  то закрасим фон для картинки переведя #151515 в rgba c прозрачностью 0.3*/
+  background: rgba(21, 21, 21, .3);
+}
+
+.swiper-slide {
+  height: 100vh;
+}
+
+.footer {
+  background-color: #151515;
+  padding: 50px 0 32px;
+  color: #fff;
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: space-around;
+  /* отодвинуть от этого блока то что ниже */
+  margin-bottom: 50px;
+}
+
+.footer__menu-list {
+  /* макс ширина заголовка + перенос 
+  250 - вычислили по ширине заголовка*/
+  max-width: 250px;
+}
+
+
+.footer__menu-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.219;
+  padding-bottom: 20px;
+}
+
+/* + значит что применим стиль к следующим детям .footer__menu-item */
+.footer__menu-item+.footer__menu-item {
+  padding-top: 20px;
+}
+
+.footer__menu-link {}
+
+.apps__menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 52px;
+}
+
+.footer__copyright {
+  font-size: 13px;
+  max-width: 806px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.footer__copyright-text {}
+
+.footer__policy {}
+
+.policy__nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.policy__nav-item {}
+
+.policy__nav-link {}
