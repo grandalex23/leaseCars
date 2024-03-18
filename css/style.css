@@ -155,10 +155,13 @@ body {
 .swiper-wrapper {
   /* т.к. на исходнике картинка с черным оверлеем и прозрачность его 0,3
   то закрасим фон для картинки переведя #151515 в rgba c прозрачностью 0.3*/
-  background: rgba(21, 21, 21, .3);
+  background: rgba(21, 21, 21, .6);
 }
 
 .swiper-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   height: 100vh;
 }
 
