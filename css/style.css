@@ -119,6 +119,7 @@ body {
 .top {
   color: #fff;
   text-align: center;
+  /* чуть поднял текст */
   padding-top: 250px;
   padding-bottom: 50px;
   /* мы "отрываем" этот элемент и ставим выше 
@@ -152,17 +153,52 @@ body {
 }
 
 
-.swiper-wrapper {
-  /* т.к. на исходнике картинка с черным оверлеем и прозрачность его 0,3
-  то закрасим фон для картинки переведя #151515 в rgba c прозрачностью 0.3*/
-  background: rgba(21, 21, 21, .6);
+.swiper-wrapper::after {
+  /* т.к. на исходнике картинка с черным оверлеем и с прозрачностью 0,3
+  то закрасим сделаем родителе полотно с цыетом #151515 и c прозрачностью 0.3
+  спозиционируем абсолютно и на весь swiper-wrapper и поднимем z на 5*/
+  content: "";
+  background: rgba(21, 21, 21, .3);
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .swiper-slide {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   height: 100vh;
+}
+
+.swiper-pagination-bullet {
+  width: 120px;
+  height: 3px;
+  background-color: #151515;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+  height: 6px;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+/* сделать между булетами отступ 15
+названия стилей присвоены бибиотекой и взяты по F12  */
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 15px;
+}
+
+/* приподняли буллеты. стили см F12 */
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 50px;
 }
 
 .footer {
