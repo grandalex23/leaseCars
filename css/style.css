@@ -1,4 +1,4 @@
-/* вначале идут общие стилии либо стили заготовки*/
+/*### вначале идут общие стилии либо стили заготовки ###*/
 html {
   /*переназначение модели отсчета размера элементов на логично-понятную
   где padding с border уже будут внутри width и height и невыйдут эти размеры
@@ -37,6 +37,16 @@ a {
   /*ставим родительский цвет*/
   color: inherit;
 }
+
+.section-title {
+  margin-bottom: 50px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/*### конец стилей заготовок ###*/
+
 
 .wrapper {
   /* следующие 3 строки для прибития футера к низу экрана */
@@ -201,6 +211,10 @@ body {
   bottom: 50px;
 }
 
+.why-lease {
+  padding: 150px 0;
+}
+
 .footer {
   background-color: #151515;
   padding: 50px 0 32px;
@@ -263,3 +277,90 @@ body {
 .policy__nav-item {}
 
 .policy__nav-link {}
+
+.why-lease__list {
+  /* можно flaex но используем сетку т.к. адаптив*/
+  display: grid;
+  /* 4 по 1 части*/
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.why-lease__item-img {
+  margin-bottom: 30px;
+}
+
+.why-lease__item-title {
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+.why-lease__item-text {
+  text-align: justify;
+}
+
+.how-work {
+  padding-bottom: 150px;
+}
+
+.how-work__inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.how-work__minititle {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 50px;
+
+}
+
+.how-work__minititle-list {
+  margin: 50px 0 70px;
+  /*счетчик*/
+  counter-reset: myCounter;
+
+}
+
+.how-work__minititle-item {
+  /* убираем нумерацию по умолч. */
+  list-style-type: none;
+  width: 270px;
+  min-height: 64px;
+  /*размещение сделаем относительно этого элемента а 
+  дочернему - абсолют*/
+  position: relative;
+  margin-left: auto;
+  box-sizing: content-box;
+  padding: 18.5px 0 18.5px 240px;
+}
+
+/*чтобы раздвинуть кружки с цифрами*/
+.how-work__minititle-item+.how-work__minititle-item {
+  margin-top: 40px;
+}
+
+
+/* ::before добавиn перед текстом how-work__minititle-item
+контент content в нашем случае нумерацию (ее добавим счетчиком) в круге*/
+.how-work__minititle-item::before {
+  counter-increment: myCounter 1;
+  content: counter(myCounter);
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #0066ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+}
