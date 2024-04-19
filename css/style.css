@@ -364,3 +364,47 @@ body {
   top: 0;
 
 }
+
+.video {
+  padding-bottom: 150px;
+}
+
+.video-title {
+  margin-bottom: 20px;
+}
+
+.video-text {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.video-content {
+  display: block;
+  margin: 0 auto;
+}
+
+.important {
+  padding-bottom: 150px;
+}
+
+.important-title {
+  margin-bottom: 20px;
+}
+
+.important-text {
+  max-width: 580px;
+  margin: 0 auto 50px;
+}
+
+.important-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: justify;
+}
+
+.important-item__img {
+  margin-bottom: 20px;
+}
