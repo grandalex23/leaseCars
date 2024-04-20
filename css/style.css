@@ -87,7 +87,7 @@ body {
   /* мы "отрываем" этот элемент и ставим выше 
   и ставим 0 по краям*/
   position: absolute;
-  z-index: 5;
+  z-index: 6;
   left: 0;
   right: 0;
 }
@@ -407,4 +407,140 @@ body {
 
 .important-item__img {
   margin-bottom: 20px;
+}
+
+.contacts {
+  padding: 100px 0 150px;
+}
+
+.contact-title {
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0 100px;
+}
+
+.form {
+  /*зададим форме некие рамки*/
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /*для переноса инпутов*/
+  flex-wrap: wrap;
+}
+
+.form-input {
+  width: 270px;
+  padding: 18px 20px;
+  display: inline-block;
+  border: 1px solid #06f;
+  margin-bottom: 50px;
+  /*для инпутов лучше прописывать шрифты их параметры*/
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* высота шрифта 120% от стандартной */
+  line-height: 1.3;
+  color: #000;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* высота шрифта 120% от стандартной */
+  line-height: 1.3;
+  color: #000;
+  opacity: .5;
+}
+
+.form-textarea {
+  /*растянем texarea на ширину блока*/
+  width: 100%;
+  min-height: 290px;
+  padding: 28px 20px;
+  resize: none;
+  border: 1px solid #06f;
+  margin-bottom: 50px;
+  /*для инпутов лучше прописывать шрифты их параметры*/
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /* высота шрифта 120% от стандартной */
+  line-height: 1.3;
+  color: #000;
+}
+
+.form-btn {
+  background-color: #151515;
+  color: #fff;
+  text-transform: uppercase;
+  /* width: 130px;
+  height: 16px; */
+  /*для ryjgjr лучше прописывать шрифты их параметры*/
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 13px 61px;
+  /*ставим кнопку по центру секции т.к. родитель form
+  display: flex*/
+  margin: 0 auto;
+}
+
+.blog {
+  padding-bottom: 50px;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.blog-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+}
+
+.blog-item__img {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.blog-item__title {
+  /*это аналог ширины для флекс элемента*/
+  flex-basis: 446px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.blog-item__link {
+  background-color: #0066ff;
+  color: #fff;
+  padding: 4px 10px;
+
+}
+
+.blog-aticles {
+  text-transform: uppercase;
+  background-color: #151515;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 13px 61px;
+  width: 225px;
+  margin: 0 auto;
+  /*текст по центру*/
+  text-align: center;
+  /*кнопка по центру*/
+  display: block;
 }
