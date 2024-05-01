@@ -551,3 +551,84 @@ body {
   /*кнопка по центру*/
   display: block;
 }
+
+.choose {
+  padding: 100px 0 150px;
+}
+
+.tabs-btn {
+  padding: 0 150px;
+  /*сначала выбрали grid но заголовки стали
+переноситься при увеличенни масштаба стр
+игото взяли flex*/
+  display: flex;
+  /* grid-template-columns: repeat(4, 1fr); */
+  justify-content: space-between;
+  gap: 80px;
+  padding-bottom: 100px;
+}
+
+.tabs-btn__item {
+  font-size: 24px;
+  font-weight: 700;
+  /*при наведении курсора - рука*/
+  cursor: pointer;
+  /*убираем то что идет от button*/
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.tabs-btn__item--active {
+  color: #0066ff;
+}
+
+.tabs-content__item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px 40px;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-img {
+  /*делаем картинку блочной убрать
+  отступ по умолчанию как у строчных*/
+  display: block;
+}
+
+.card-content {
+  border: 1px solid #0066ff;
+  padding: 0 5px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px 0 5px;
+  margin-bottom: 20px;
+
+}
+
+.card-text {
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+.card-price {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+.card-link {
+  display: block;
+  color: #0066ff;
+  border: 1px solid #0066ff;
+  border-top: 0;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}

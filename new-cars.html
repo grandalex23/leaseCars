@@ -38,10 +38,136 @@
           <h2 class="section-title">
             Choose your Car
           </h2>
+          <div class="tabs">
+            <div class="tabs-btn">
+              <!-- в JS добавим функцию open для замены класса tabs-btn__item на active 
+                поэтому тут добавим data-button="content-1" а у кнопок tabs-content__item 
+                добавим id="content-1" -->
+              <button class="tabs-btn__item tabs-btn__item--active" data-button="content-1">Car and Minivan</button>
+              <button class="tabs-btn__item" data-button="content-2">Trucks</button>
+              <button class="tabs-btn__item" data-button="content-3">Crossovers & SUVs</button>
+              <button class="tabs-btn__item" data-button="content-4">Electrified</button>
+            </div>
+            <div class="tabs-content">
+              <!-- id="content-1" связь в JS с кнопками tabs-btn__item -->
+              <div class="tabs-content__item" id="content-1">
+                <div class="card">
+                  <img src="images/card-1.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Toyota Crown 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 650/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-2.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Prius Prime 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 450/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-3.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Toyota Prius 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 400/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-4.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Hyundai Kona 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 510/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-5.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Ford Explorer 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 1,013/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-6.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Santa Fe 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 739/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-7.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">KIA Niro 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 554/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-8.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Chevrolet Silverado</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 1,032/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-9.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Honda CR-V 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 591/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-10.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Hyundai Tucson</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 528/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-11.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Chevrolet Equinox</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 471/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+                <div class="card">
+                  <img src="images/card-12.jpg" alt="" class="card-img">
+                  <div class="card-content">
+                    <h4 class="card-title">Jeep Wrangler 2023</h4>
+                    <p class="card-text">starting from $ 39900</p>
+                    <p class="card-price">$ 997/mo</p>
+                  </div>
+                  <a href="#" class="card-link">see details</a>
+                </div>
+              </div>
+              <div class="tabs-content__item" id="content-2">2</div>
+              <div class="tabs-content__item" id="content-3">3</div>
+              <div class="tabs-content__item" id="content-4">4</div>
+            </div>
+          </div>
           <a href="#" class="showmore-links">SHOW MORE</a>
         </div>
       </section>
-
       <section class="blog">
         <div class="container">
           <div class="blog-list">
@@ -131,6 +257,8 @@
       </div>
     </footer>
   </div>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
