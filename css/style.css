@@ -556,6 +556,10 @@ body {
   padding: 100px 0 150px;
 }
 
+.tabs {
+  margin-bottom: 70px;
+}
+
 .tabs-btn {
   padding: 0 150px;
   /*сначала выбрали grid но заголовки стали
@@ -584,9 +588,14 @@ body {
 }
 
 .tabs-content__item {
-  display: grid;
+  /*тут none но ниже + active будет grid*/
+  display: none;
   grid-template-columns: repeat(4, 1fr);
   gap: 100px 40px;
+}
+
+.tabs-content__item.tabs-content__item--active {
+  display: grid;
 }
 
 .card {
