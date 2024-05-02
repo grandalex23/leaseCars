@@ -87,7 +87,7 @@ body {
   /* мы "отрываем" этот элемент и ставим выше 
   и ставим 0 по краям*/
   position: absolute;
-  z-index: 6;
+  z-index: 10;
   left: 0;
   right: 0;
 }
